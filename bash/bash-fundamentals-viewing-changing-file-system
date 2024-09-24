@@ -1,0 +1,35 @@
+Common Shell Commands for File Management and changes 👷🏻🚧
+
+1. cp — Copy
+
+Used to copy files or directories.
+Syntax: cp source destination
+Example:
+$ cp file1 file1_copy
+$ cp file1 file2 destination_folder
+
+2. mv — Move
+
+Used to move or rename files and directories.
+Syntax: mv source destination
+
+$ mv index.html website/
+
+3. rm — Remove
+Deletes files or directories.
+The -r option allows removal of directories and their contents.
+Example
+$ rm -r bad_selfies
+
+4. ls — List with Options
+
+Lists directory contents with optional flags:
+-a: Show all, including hidden files.
+-l: Long format with detailed info.
+-t: Sort by modification time.
+Example:
+$ ls -a
+$ ls -l
+$ ls -t
+Command Options
+Options modify the behavior of commands. They are typically a single letter preceded by a -, like -a, -l, or -r.
