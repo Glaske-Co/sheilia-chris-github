@@ -1,0 +1,122 @@
+git checkout Basic-Shell-Commands
+error: pathspec 'Basic-Shell-Commands' did not match any file(s) known to git
+git branch
+git checkout -b Basic-Shell-Commands
+Switched to a new branch 'Basic-Shell-Commands'
+pwd
+/Users/sheilia.wagner/Github/sheilia-chris-github/bash
+ls
+bash-fundamentals-navigating-file-system       bash-fundamentals-redirecting-input-output     bash-fundamentals-viewing-changing-file-system
+cd ..
+pwd
+/Users/sheilia.wagner/Github/sheilia-chris-github
+cd bash
+touch new-test-file
+code new-test-file
+git branch
+git status
+On branch Basic-Shell-Commands
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .DS_Store
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    ../bash-fundamentals-redirecting-input-output
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	../.DS_Store
+	.gitignore
+	new-test-file
+
+git add .
+git status
+On branch Basic-Shell-Commands
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .DS_Store
+	new file:   .gitignore
+	new file:   new-test-file
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    ../bash-fundamentals-redirecting-input-output
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	../.DS_Store
+
+git diff --cached
+gigit commit -m "Add new test file"
+
+[Basic-Shell-Commands 213ca66] Add new test file
+ 3 files changed, 6 insertions(+)
+ create mode 100644 bash/.DS_Store
+ create mode 100644 bash/.gitignore
+ create mode 100644 bash/new-test-file
+git push origin Basic-Shell-Commands
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 810 bytes | 810.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: This repository moved. Please use the new location:
+remote:   git@github.com:Glaske-Co/sheilia-chris-github.git
+remote:
+remote: Create a pull request for 'Basic-Shell-Commands' on GitHub by visiting:
+remote:      https://github.com/Glaske-Co/sheilia-chris-github/pull/new/Basic-Shell-Commands
+remote:
+To github.com:chrisglaske/sheilia-chris-github.git
+ * [new branch]      Basic-Shell-Commands -> Basic-Shell-Commands
+open https://github.com/Glaske-Co/sheilia-chris-github/pull/new/Basic-Shell-Commands
+gigit fetch origin
+git status
+On branch Basic-Shell-Commands
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    ../bash-fundamentals-redirecting-input-output
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	../.DS_Store
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git touch "basic shell commands copy"
+git: 'touch' is not a git command. See 'git --help'.
+touch basic-bash-commands.txt
+code basic-bash-commands.txt
+echo "Hello Git and Github" >>README.txt
+echo "Hello" > hello.txt
+cat README.txt
+Hello Git and Github
+grep -R README.txt
+ls
+README.txt                                     bash-fundamentals-viewing-changing-file-system new-test-file
+bash-fundamentals-navigating-file-system       basic-bash-commands.txt
+bash-fundamentals-redirecting-input-output     hello.txt
+cp basic-bash-commands.txt
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-aclpSsvXx] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-aclpSsvXx] source_file ... target_directory
+ rm -r bash-fundamentals-navigating-file-system
+ls -a
+.                                              .gitignore                                     basic-bash-commands.txt
+..                                             README.txt                                     hello.txt
+.DS_Store                                      bash-fundamentals-redirecting-input-output     new-test-file
+.bashissen                                     bash-fundamentals-viewing-changing-file-system
+ls -l
+total 40
+-rw-r--r--@ 1 sheilia.wagner  staff   21 Oct  2 10:04 README.txt
+-rw-r--r--@ 1 sheilia.wagner  staff  999 Sep 24 11:26 bash-fundamentals-redirecting-input-output
+-rw-r--r--@ 1 sheilia.wagner  staff  817 Sep 24 11:21 bash-fundamentals-viewing-changing-file-system
+-rw-r--r--@ 1 sheilia.wagner  staff    0 Oct  2 10:03 basic-bash-commands.txt
+-rw-r--r--@ 1 sheilia.wagner  staff    6 Oct  2 10:05 hello.txt
+-rw-r--r--@ 1 sheilia.wagner  staff   39 Oct  2 09:53 new-test-file
+ls -t
+hello.txt                                      basic-bash-commands.txt                        bash-fundamentals-redirecting-input-output
+README.txt                                     new-test-file                                  bash-fundamentals-viewing-changing-file-system
